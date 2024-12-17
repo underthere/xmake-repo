@@ -44,8 +44,6 @@ package("ffmpeg-cl")
     add_configs("vaapi",            {description = "Enable vaapi library.", default = false, type = "boolean"})
     add_configs("vdpau",            {description = "Enable vdpau library.", default = false, type = "boolean"})
     add_configs("hardcoded-tables", {description = "Enable hardcoded tables.", default = true, type = "boolean"})
-    add_configs("cc",               {description = "Set the C compiler.", default = "gcc", type = "string"})
-    add_configs("cxx",              {description = "Set the C++ compiler.", default = "g++", type = "string"})
     if is_plat("linux") then
         add_configs("libdrm", {description = "Enable libdrm hardware acceleration", default = true, type = "boolean"})
     end
