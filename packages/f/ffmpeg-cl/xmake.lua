@@ -1,4 +1,4 @@
-package("ffmpeg")
+package("ffmpeg-cl")
     set_homepage("https://www.ffmpeg.org")
     set_description("A collection of libraries to process multimedia content such as audio, video, subtitles and related metadata.")
     set_license("GPL-3.0")
@@ -44,6 +44,8 @@ package("ffmpeg")
     add_configs("vaapi",            {description = "Enable vaapi library.", default = false, type = "boolean"})
     add_configs("vdpau",            {description = "Enable vdpau library.", default = false, type = "boolean"})
     add_configs("hardcoded-tables", {description = "Enable hardcoded tables.", default = true, type = "boolean"})
+    add_configs("cc",               {description = "Set the C compiler.", default = false, type = "string"})
+    add_configs("cxx",              {description = "Set the C++ compiler.", default = false, type = "string"})
     if is_plat("linux") then
         add_configs("libdrm", {description = "Enable libdrm hardware acceleration", default = true, type = "boolean"})
     end
