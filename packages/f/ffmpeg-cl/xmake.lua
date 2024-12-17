@@ -145,12 +145,8 @@ package("ffmpeg-cl")
             table.insert(configs, "--enable-static")
             table.insert(configs, "--disable-shared")
         end
-        if package:config("cc") then
-            table.insert(configs, "--cc=" .. package:config("cc"))
-        end
-        if package:config("cxx") then
-            table.insert(configs, "--cxx=" .. package:config("cxx"))
-        end
+        table.insert(configs, "--cc=/usr/bin/clang")
+        table.insert(configs, "--cxx=/usr/bin/clang++")
         if package:debug() then
             table.insert(configs, "--enable-debug")
         else
